@@ -1,11 +1,45 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker ps -a
+docker logs 084fc2e10adf
 
 ## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug:2022-10-03 17:42:00,836: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug:2022-10-03 17:42:00,836: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+INFO:werkzeug:2022-10-03 17:42:29,205:172.17.0.1 - - [03/Oct/2022 17:42:29] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-03 17:42:29,230:172.17.0.1 - - [03/Oct/2022 17:42:29] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-03 17:42:29,285:172.17.0.1 - - [03/Oct/2022 17:42:29] "GET /favicon.ico HTTP/1.1" 404 -
+DEBUG:app:2022-10-03 17:44:51,699:Retrieved About Us page
+INFO:werkzeug:2022-10-03 17:44:51,703:172.17.0.1 - - [03/Oct/2022 17:44:51] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-03 17:44:51,728:172.17.0.1 - - [03/Oct/2022 17:44:51] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-10-03 17:45:36,404:172.17.0.1 - - [03/Oct/2022 17:45:36] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-03 17:45:36,424:172.17.0.1 - - [03/Oct/2022 17:45:36] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:2022-10-03 17:45:39,229:Retrieved article with title 2020 CNCF Annual Report
+INFO:werkzeug:2022-10-03 17:45:39,233:172.17.0.1 - - [03/Oct/2022 17:45:39] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-03 17:45:39,254:172.17.0.1 - - [03/Oct/2022 17:45:39] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:2022-10-03 17:45:57,712:Could not find post with ID 12312 - does not exist
+INFO:werkzeug:2022-10-03 17:45:57,715:172.17.0.1 - - [03/Oct/2022 17:45:57] "GET /12312 HTTP/1.1" 404 -
+INFO:werkzeug:2022-10-03 17:45:57,735:172.17.0.1 - - [03/Oct/2022 17:45:57] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-10-03 17:46:09,244:172.17.0.1 - - [03/Oct/2022 17:46:09] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-03 17:46:09,260:172.17.0.1 - - [03/Oct/2022 17:46:09] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:2022-10-03 17:46:35,899:Created article with title my first article
+INFO:werkzeug:2022-10-03 17:46:35,900:172.17.0.1 - - [03/Oct/2022 17:46:35] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:2022-10-03 17:46:35,907:172.17.0.1 - - [03/Oct/2022 17:46:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-03 17:46:35,930:172.17.0.1 - - [03/Oct/2022 17:46:35] "GET /static/css/main.css HTTP/1.1" 304 -
+DEBUG:app:2022-10-03 17:46:41,628:Retrieved article with title my first article
+INFO:werkzeug:2022-10-03 17:46:41,630:172.17.0.1 - - [03/Oct/2022 17:46:41] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-03 17:46:41,653:172.17.0.1 - - [03/Oct/2022 17:46:41] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:2022-10-03 17:47:09,133:172.17.0.1 - - [03/Oct/2022 17:47:09] "GET /healtz HTTP/1.1" 404 -
+INFO:werkzeug:2022-10-03 17:47:13,292:172.17.0.1 - - [03/Oct/2022 17:47:13] "GET /healthz HTTP/1.1" 200 -
+INFO:werkzeug:2022-10-03 17:47:25,586:172.17.0.1 - - [03/Oct/2022 17:47:25] "GET /metrics HTTP/1.1" 200 -
