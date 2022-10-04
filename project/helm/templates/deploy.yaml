@@ -28,8 +28,8 @@ spec:
             port: {{ .Values.livenessProbe.httpGet.port }}
         readinessProbe:
           httpGet:
-            path: {{ .Values.readinessProbe.path }}
-            port: {{ .Values.readinessProbe.port }}
+            path: {{ .Values.readinessProbe.httptGet.path }}
+            port: {{ .Values.readinessProbe.httpGet.port }}
         resources: 
 {{ toYaml .Values.resources | indent 12 }}
 status: {}
