@@ -24,12 +24,12 @@ spec:
           - containerPort: {{ .Values.containerPort }}
         livenessProbe:
           httpGet:
-            path: {{ .Values.livenessProbe.path }}
-            port: {{ .Values.containerPort }}
+            path: {{ .Values.livenessProbe.httpGet.path }}
+            port: {{ .Values.livenessProbe.httpGet.port }}
         readinessProbe:
           httpGet:
             path: {{ .Values.readinessProbe.path }}
-            port: {{ .Values.containerPort }}
+            port: {{ .Values.readinessProbe.port }}
         resources: 
 {{ toYaml .Values.resources | indent 12 }}
 status: {}
